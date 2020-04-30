@@ -16,11 +16,12 @@ import javax.inject.Named;
  *
  * @author Santiago Gómez
  */
-@Named
-@RequestScoped
+
 /*
 clase que recibe los datos principales del trabajador
 */
+@Named(value = "index")
+@RequestScoped
 public class Index implements Serializable {
     /*
     almacena el nombre del trabajador
