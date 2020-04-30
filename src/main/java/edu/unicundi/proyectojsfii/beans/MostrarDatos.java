@@ -97,10 +97,11 @@ public class MostrarDatos implements Serializable {
     public void setCantidadIdiomas(int cantidadIdiomas) {
         this.cantidadIdiomas = cantidadIdiomas;
     }
-    /*
-     Metodo para calcular el sueldo total del trabajador
+    
+    /**
+     * valida días, nombre y apellido
+     * @return 
      */
-
     public boolean validar() {
         if (datos.getDiasTrabajados() <= 0 || datos.getNombre().length() <= 0 || datos.getApellido().length() <= 0) {
             return false;
@@ -110,6 +111,9 @@ public class MostrarDatos implements Serializable {
     }
 
     @PostConstruct
+    /*
+     Metodo para calcular el sueldo total del trabajador
+     */
     public void calcularNomina() {
         if (validar()) {
             cantidadIdiomas = (datos.getIdiomas().length) * 10000;
