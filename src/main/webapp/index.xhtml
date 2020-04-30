@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+        <br><h:graphicImage url = "resources/Escudo_udec.png" height="5%" width="5%" /></br>
+
+        <h:outputLink value = "https://www.google.com.co/" >Ir a Google</h:outputLink>
+
+
+
+        <h:form>
+            <br>
+                <h:outputText value="Nombre"/>
+                <p:inputText id="Nombre" label="ingrese el nombre" required="true" value = "#{index.nombre}"  />
+                
+            </br>
+
+            <br>
+                <h:outputText value="Apellido"/>
+                <p:inputText id="Apellido" label="ingrese el apellido" required="true" value = "#{index.apellido}" />
+                
+            </br>
+
+            <br>
+                <h:outputText value="Cédula"/>
+                <p:inputText id="Cedula" label="Ingrese la cedula" required="true" value = "#{index.cedula}" />
+                
+            </br>
+
+            <br>
+                <h:outputText value="Fecha de nacimiento"/>
+                <p:inputText id="FechaNacimiento" label="Ingrese Fecha" required="true" value = "#{index.fechaNacimiento}" />
+                
+
+            </br>
+
+            <br>
+                <p:selectOneMenu value="#{index.nivelEstudio}" >
+                    <f:selectItem itemValue="primaria" itemLabel="primaria" />
+                    <f:selectItem itemValue="secundaria" itemLabel="secundaria" />
+                    <f:selectItem itemValue="tecnico" itemLabel="técnico" />
+                    <f:selectItem itemValue="tecnologo" itemLabel="tecnólogo" />
+                    <f:selectItem itemValue="profesional" itemLabel="profesional" />
+                    <f:selectItem itemValue="magister" itemLabel="magister" />
+
+                </p:selectOneMenu>
+            </br>
+
+            <br>
+                <p:selectManyCheckbox value ="#{index.idiomas}" >
+                    <f:selectItem itemValue="español" itemLabel= "Español" />
+                    <f:selectItem itemValue="ingles" itemLabel= "Ingles" />
+                    <f:selectItem itemValue="frances" itemLabel= "Frances" />
+                    <f:selectItem itemValue="aleman" itemLabel= "Aleman" />
+                </p:selectManyCheckbox>
+            </br>
+            <br>
+                <h:outputText value="Días trabajados"/>
+                <p:inputText id="DiasTrabajados" label="Ingrese días trabajados" required="true" value = "#{index.diasTrabajados}" />
+                
+            </br>
+            <p:commandButton action="mostrarDatos" value="Enviar"/>
+        </h:form>   
+
+
+        <br />
+        
+    </h:body>
+</html>
+
