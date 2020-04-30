@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Mostrar datos</title>
+    </h:head>
+    <h:body>
+
+        <p:button value = "Volver" outcome = "index" />
+        
+        
+
+        <br>
+            <p:outputLabel for="Nombre" value="Nombre:  "/>
+            <p:outputLabel id="Nombre" value="#{mostrarDatos.datos.nombre}"/>
+        </br>
+
+        <br>
+            <p:outputLabel for="Apellido" value="Apellido:  "/>
+            <p:outputLabel id="Apellido" value="#{mostrarDatos.datos.apellido}"/>
+        </br>
+
+        <br>
+            <p:outputLabel for="Cedula" value="Cedula:  "/>
+            <p:outputLabel id="Cedula" value="#{mostrarDatos.datos.cedula}"/>
+        </br>
+        
+        <br>
+            <p:outputLabel for="FechaNacimiento" value="Fecha de nacimiento:  "/>
+            <p:outputLabel id="FechaNacimiento" value="#{mostrarDatos.datos.fechaNacimiento}"/>
+            
+        </br>
+        
+        <br>
+            <p:outputLabel for="NivelDeEstudio" value="Nivel de estudio:  "/>
+            <p:outputLabel id="NivelDeEstudio" value="#{mostrarDatos.datos.nivelEstudio}"/>
+            
+        </br>
+        
+        <br>
+            <p:outputLabel value="Idiomas:  "/>
+            <p:dataTable value="#{mostrarDatos.datos.idiomas}" var="item">
+            <p:column>
+                <p:outputLabel value="#{item}"/>
+            </p:column>
+            </p:dataTable>
+            
+            
+        </br>
+        
+        <br>
+            <p:outputLabel for="DiasTrabajados" value="Dias trabajados:  "/>
+            <p:outputLabel id="DiasTrabajados" value="#{mostrarDatos.datos.diasTrabajados}"/>
+            
+        </br>
+        
+        <br>
+            <p:outputLabel for="Nomina" value="Su sueldo es:  "/>
+            <p:outputLabel id="Nomina" value="#{mostrarDatos.sueldo}"/>
+            
+        </br>
+
+
+
+
+    </h:body>
+</html>
+
