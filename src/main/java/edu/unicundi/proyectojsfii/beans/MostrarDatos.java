@@ -110,11 +110,11 @@ public class MostrarDatos implements Serializable {
         }
     }
 
-    @PostConstruct
+    //@PostConstruct
     /*
      Metodo para calcular el sueldo total del trabajador
      */
-    public void calcularNomina() {
+    public int calcularNomina() {
         if (validar()) {
             cantidadIdiomas = (datos.getIdiomas().length) * 10000;
             if (datos.getNivelEstudio().contains("tecnico")) {
@@ -132,5 +132,6 @@ public class MostrarDatos implements Serializable {
         } else {
             datos.setDiasTrabajados(0);
         }
+        return sueldo;
     }
 }
